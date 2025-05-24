@@ -21,46 +21,61 @@ body {
 /* Header */
 header {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: center; /* Keep items vertically centered */
+  justify-content: flex-start; /* Align items to the left */
   background: linear-gradient(to right, #ee8f97, #e8828b, #B76E79);
   color: var(--text-color);
-  padding: 20px 30px;
+  padding: 10px 20px; /* Revert to original padding */
   border-radius: 20px;
   width: 100%;
+  position: relative; /* Add this for absolute positioning */
 }
 
 .logo {
-  width: 200px;
+  width: 140px;
   height: auto;
+  margin-bottom: 0; /* Remove this line or set to 0 */
 }
 
 .header-text {
-  padding-left: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
-  flex-grow: 1;
-  margin: 0 auto; /* centers it */
+  padding-left: 0;
 }
 
 
 
-.header-text h1,
+.header-text h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
 .header-text p {
-  margin: 0; /* removes offset margin */
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 5px 0 0;
 }
 
+/* 🔽 Tablet and smaller screens */
+@media (max-width: 768px) {
+  .header-text h1 {
+    font-size: 1.5rem; /* Adjusted slightly smaller */
+  }
+    .header-text p {
+    font-size: 0.8rem; /* Slightly smaller subtitle */
+  }
+}
 
-.header-text p {
-  font-size: 1.2rem;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  margin-top: 10px;
-
+/* 🔽 Extra small (phones) */
+@media (max-width: 480px) {
+  .header-text h1 {
+    font-size: 1.3rem;
+  }
+  .header-text p {
+    font-size: 0.75rem;
+  }
 }
 
 /* Navigation */
@@ -278,4 +293,47 @@ header {
     display: none; /* Hide on smaller screens if not needed */
   }
 }
+/* Footer */
+.footer {
+  background-color: #fff;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer-link {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #ff69b4;
+  text-decoration: none;
+}
+
+.footer-icon {
+  color: #333;
+  font-size: 1.4rem;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.footer-icon:hover {
+  color: #ff69b4;
+}
+
+.btn-pink {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+}
+
+.btn-pink:hover {
+  background-color: #e754a4;
+  color: white;
+}
+
+
+
 
