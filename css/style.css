@@ -48,7 +48,7 @@ header {
 
 
 .header-text h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   margin: 0;
 }
@@ -211,51 +211,62 @@ header {
 }
 
 /* Contact Page */
+
 .contact-wrapper {
-  padding: 20px;
-}
+      padding: 40px 0;
+    }
 
-.contact-image-wrapper {
-  max-height: 400px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    .contact-card {
+      background-color: #ffffff;
+      padding: 1rem;
+      border: none;
+      box-shadow: none;
+    }
 
-.contact-image {
-  height: 100%;
-  width: auto;
-  object-fit: contain;
-}
+    .contact-form .form-control {
+      border: 1px solid #ddd;
+      padding: 10px 14px;
+      border-radius: 5px;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
 
-.contact-form {
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+    .contact-form .form-control:focus {
+      border-color: #B76E79;
+      box-shadow: 0 0 0 2px rgba(183, 110, 121, 0.2);
+    }
 
-.contact-form .form-label {
-  font-weight: 600;
-  color: var(--header-color);
-}
+    .form-floating > .form-control,
+    .form-floating > .form-control:focus {
+    height: calc(2.8rem + 2px);
 
-.contact-form .btn-primary {
-  background-color: var(--header-color);
-  border: none;
-}
+    }
 
-.contact-form .btn-primary:hover {
-  background-color: #944b57;
-}
+    .form-floating > label {
+      font-size: 14px;
+      color: #777;
+    }
 
-/* Responsive */
-@media (max-width: 767px) {
-  .header-text h1,
-  .header-text p {
-    margin-right: 0;
-  }
+    .btn[style*="background-color: #B76E79"] {
+      font-size: 15px;
+      border-radius: 4px;
+      transition: 0.3s ease;
+    }
+
+    .btn[style*="background-color: #B76E79"]:hover {
+      background-color: #9a5a65 !important;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 767px) {
+      .contact-card {
+        padding: 1.5rem !important;
+      }
+    }
+
+
+
+
 
   .header {
     flex-direction: column;
@@ -332,6 +343,48 @@ header {
 .btn-pink:hover {
   background-color: #e754a4;
   color: white;
+}
+/* Circular Image Navigation */
+.circle-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;     /* Clips image edges to maintain circle shape */
+  position: relative;  /* For proper image containment */
+  border: 2px solid #f8f9fa;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  color:#B76E79;
+
+}
+/* Image Fill Rules */
+.circle-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  background: white; /* Only needed if using PNGs with transparency */
+}
+
+
+.circle-image:hover {
+  transform: scale(1.05);
+  border-color: #ffc1cc; /* Light pink border on hover */
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+  .circle-image {
+    width: 100px;
+    height: 100px;
+  }
+}
+/* Added to style.css */
+.category-label {
+  color: #B76E79;       /* Matches header color */
+  font-weight: 600;     /* Bold text */
+  margin-top: 15px;     /* Spacing above the text */
+  text-transform: uppercase; /* Uppercase to match nav links */
 }
 
 

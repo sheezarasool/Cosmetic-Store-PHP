@@ -50,7 +50,7 @@
         <li class="nav-item"><a href="makeup.html" class="nav-link">MAKEUP</a></li>
         <li class="nav-item"><a href="skincare.html" class="nav-link">SKINCARE</a></li>
         <li class="nav-item"><a href="Fragrance.html" class="nav-link">FRAGRANCES</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">OFFER</a></li>
+        <li class="nav-item"><a href="offer.html" class="nav-link">OFFER</a></li>
         <li class="nav-item"><a href="contact.html" class="nav-link active-link">CONTACT</a></li>
       </ul>
 
@@ -63,39 +63,48 @@
     </div>
   </div>
 </nav>
+<!-- contact form-->
 
-
-   <div class="contact-wrapper container-fluid px-3 px-md-4">
-    <div class="row h-100 align-items-center gx-3">
-        <div class="col-md-6 d-none d-md-block">
-            <div class="contact-image-wrapper">
-                <img src="../images/eyeshade.webp" alt="Contact Us" class="img-fluid contact-image">
+<div class="contact-wrapper container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-5">
+        <div class="contact-card">
+          <h2 class="text-center mb-4" style="color: #B76E79;">Contact Us!</h2>
+          <form class="contact-form" action="contact.php" method="POST">
+            <div class="mb-3 form-floating">
+              <input type="text" class="form-control" id="username" name="username" placeholder="Name" required>
+              <label for="username">Name</label>
             </div>
+            <div class="mb-3 form-floating">
+              <input type="email" class="form-control" id="email" name="email" placeholder="Email *" required>
+              <label for="email">Email <span class="text-danger">*</span></label>
+            </div>
+            <div class="mb-3 form-floating">
+              <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+              <label for="subject">Subject</label>
+            </div>
+            <div class="mb-3 form-floating">
+              <textarea class="form-control" id="message" name="message" placeholder="Comment" style="height: 120px" required></textarea>
+              <label for="message">Comment</label>
+            </div>
+            <button type="submit" class="btn w-100 py-2 mt-2" style="background-color: #B76E79; color: white;">Send</button>
+          </form>
         </div>
-        <div class="col-md-6">
-            <h2 class="text-center mb-3">Contact Us</h2>
-            <form class="contact-form" action="contact.php" method="POST">
-
-                <div class="mb-2">
-                    <label for="username" class="form-label">Your Name</label>
-                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter your full name" required>
-
-                </div>
-                <div class="mb-2">
-                    <label for="email" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
-                </div>
-                <div class="mb-2">
-                    <label for="message" class="form-label">Message / Feedback</label>
-                    <textarea class="form-control" id="message" name="message" rows="3" placeholder="Your message..." required></textarea>
-                </div>
-                <div class="d-grid">
-                    <button type="submit" class="btn btn-primary mt-2">Submit</button>
-                </div>
-            </form>
-        </div>
+      </div>
     </div>
-</div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
 <footer class="footer bg-white text-dark py-5 mt-5">
   <div class="container-fluid px-5">
     <div class="row text-center text-md-start">
