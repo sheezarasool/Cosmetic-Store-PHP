@@ -14,7 +14,7 @@
 
   <!-- Your Custom Styles -->
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/index.js"></script>
+  
 </head>
 
 <body>
@@ -56,14 +56,21 @@
       </ul>
 
       <!-- Right-Aligned Shopping Cart Icon -->
-      <div class="cart-icon ms-lg-3">
-        <a href="#" class="nav-link">
-          <i data-feather="shopping-cart" class="feather-icon"></i>
-        </a>
-      </div>
-    </div>
-  </div>
+     <!-- Right-Aligned Shopping Cart Icon -->
+<ul class="navbar-nav ms-auto">
+  <li class="nav-item position-relative">
+    <a href="#" class="nav-link position-relative">
+      <i data-feather="shopping-cart" class="feather-icon"></i>
+      <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        0
+      </span>
+    </a>
+  </li>
+</ul>
+</div> <!-- CLOSE collapse navbar-collapse -->
+</div> <!-- CLOSE container -->
 </nav>
+
 
 
   <!-- Hero Section -->
@@ -74,31 +81,15 @@
   </section>
 
   <!-- Product Section -->
-  <section class="product-section container my-4">
-    <h2 class="text-center mb-4">SHOP ALL PRODUCTS</h2>
-    <div class="row" id="productRow">
-<script>
-  const row = document.getElementById("productRow");
+<section class="product-section container my-4">
+  <h2 class="text-center mb-4">SHOP ALL PRODUCTS</h2>
+  <div class="row" id="productRow"></div>
+</section>
 
-    newArrivals.map(product => {
-    const col = document.createElement("div");
-    col.className = "col-12 col-sm-6 col-lg-3 mb-4";
-    col.innerHTML = `
-      <div class="product-card h-100">
-        <img src="${product.image}" alt="${product.alt}" class="img-fluid">
-        <div class="card-content">
-          <h3>${product.title}</h3>
-          <p>${product.price}</p>
-        </div>
-        <button>Add to cart</button>
-      </div>
-    `;
-    row.appendChild(col);
-  });
-</script>
+     
 
-    </div>
-  </section>
+
+
 
 
 <footer class="footer bg-white text-dark py-5 mt-5">
@@ -153,6 +144,7 @@
 
   <!-- Bootstrap JS (optional for extra functionality like collapse) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/index.js"></script>
   <script>
   feather.replace();
   </script>
